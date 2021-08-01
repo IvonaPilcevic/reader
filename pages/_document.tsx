@@ -22,7 +22,10 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
-
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap"
+            rel="stylesheet"
+          ></link>
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <body>
