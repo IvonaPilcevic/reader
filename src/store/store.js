@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocalObservable } from "mobx-react-lite";
 import { nanoid } from "nanoid";
-import { getFontDefinitionFromNetwork } from "next/dist/next-server/server/font-utils";
 
 const StoreContext = React.createContext(null);
 
