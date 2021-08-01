@@ -29,7 +29,7 @@ export const ReadingListCards = observer(() => {
       <h2>My lists ({Object.keys(store?.readingLists)?.length})</h2>
       <Grid container justifyContent="space-between">
         {Object.keys(store?.readingLists)?.map((listName: string) => (
-          <Grid style={{ width: "30%" }}>
+          <Grid style={{ maxWidth: "30%" }} key={listName}>
             <SingleReadingListCard
               listName={listName}
               removeList={() => store?.removeList(listName)}
@@ -59,7 +59,9 @@ export const ReadingListCards = observer(() => {
           onChange={(e: any) => setSelectedList(e.target.value)}
         >
           {Object.keys(store?.readingLists)?.map((listName) => (
-            <MenuItem value={listName}>{listName}</MenuItem>
+            <MenuItem key={listName} value={listName}>
+              {listName}
+            </MenuItem>
           ))}
         </Select>
       </div>

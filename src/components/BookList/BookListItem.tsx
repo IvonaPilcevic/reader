@@ -28,7 +28,8 @@ export const BookListItem: React.FC<{
     <ListItem>
       <StarBorder color="disabled" /> &nbsp;
       <span>
-        {title}, &nbsp; {name}, &nbsp; ({year})
+        <span className="book-title">{title}</span>, &nbsp; {name}, &nbsp; (
+        {year})
       </span>
       <MarkAsDoneIcon
         done={done}

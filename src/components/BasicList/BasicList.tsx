@@ -29,7 +29,8 @@ export const BasicList: React.FC<Props> = ({
           <ListItem key={item?.id}>
             <StarBorder color="disabled" /> &nbsp;
             <span>
-              {item?.title}, {item?.author} ({item?.year})
+              <span className="book-title"> {item?.title}</span>, {item?.author}{" "}
+              ({item?.year})
             </span>
           </ListItem>
         ))}

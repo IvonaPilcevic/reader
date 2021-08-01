@@ -35,7 +35,7 @@ export const Suggestions: React.FC<{
   const options = suggestions?.map((suggestion: any) => (
     <div style={{ marginBottom: "5px" }} key={nanoid()}>
       <SearchIcon fontSize="small" /> &nbsp;
-      {suggestion?.title}, &nbsp;
+      <span className="book-title">{suggestion?.title}</span>, &nbsp;
       {suggestion?.author_name?.map((author: string) => author) || "unknown"},
       &nbsp; ({suggestion?.first_publish_year || "unknown"})
       {store?.books?.filter(

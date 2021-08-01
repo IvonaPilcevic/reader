@@ -38,7 +38,8 @@ export const SingleReadingListCard: React.FC<Props> = ({
             <div key={item?.id}>
               <ListItem key={item?.id}>
                 <StarBorder color="disabled" /> &nbsp; &nbsp;
-                {item?.title}, {item?.author}, ({item?.year}) &nbsp;
+                <span className="book-title">{item?.title}</span>,{" "}
+                {item?.author}, ({item?.year}) &nbsp;
                 <RemoveFromListIcon
                   removeItem={() => removeItemFromList(item?.id, listName)}
                 />
