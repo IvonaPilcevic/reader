@@ -6,7 +6,7 @@ import { Container, Grid, List, ListItem } from "@material-ui/core";
 import StarBorder from "@material-ui/icons/StarBorder";
 
 import { useStore } from "../src/store/store";
-import { CustomList } from "../src/components/CustomList/CustomList";
+import { BasicList } from "../src/components/BasicList/BasicList";
 import { Search } from "../src/components/Search/Search";
 import { Button } from "../src/components/Button";
 
@@ -17,7 +17,7 @@ const Home = observer(() => {
     <Container>
       <Grid container justifyContent="space-around">
         <Search />
-        <CustomList
+        <BasicList
           listName="Reading List"
           items={store.books}
           hasButton
