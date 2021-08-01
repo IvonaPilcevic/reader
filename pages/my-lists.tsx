@@ -1,12 +1,8 @@
 import React from "react";
-import { Container } from "@material-ui/core";
+import { ReadingListCards } from "../src/components/ReadingListCards/ReadingListCards";
 
 const MyLists = () => {
-  return (
-    <Container>
-      <h1>My lists</h1>
-    </Container>
-  );
+  return <ReadingListCards />;
 };
 
 export default MyLists;
