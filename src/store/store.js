@@ -65,84 +65,94 @@ export const StoreProvider = ({ children }) => {
     },
 
     readingLists: {
-      favorites: [
+      Favorites: [
         {
-          title: "book1",
-          author: "author 1",
-          year: 1990,
-          id: nanoid(),
-        },
-        {
-          title: "Harry Potter",
+          title: "Harry Potter and the Philosopher's Stone",
           author: "J.K. Rowling",
-          year: 2000,
+          year: 1997,
           id: nanoid(),
         },
         {
-          title: "The Kite Runner",
-          author: "Khaled Hosseini",
-          year: 2003,
+          title: "Harry Potter and the Chamber of Secrets",
+          author: "J.K. Rowling",
+          year: 1998,
+          id: nanoid(),
+        },
+        {
+          title: "Harry Potter and the Prisoner of Azkaban",
+          author: "J.K. Rowling",
+          year: 1999,
           id: nanoid(),
         },
       ],
 
-      work: [
+      Work: [
         {
-          title: "book1",
-          author: "author 1",
+          title: "Artificial Intelligence",
+          author: "Predrag Janičić, Mladen Nikolić",
           id: nanoid(),
-          year: 1900,
+          year: 2021,
         },
         {
-          title: "Harry Potter",
-          author: "J.K. Rowling",
+          title: "Clean Code",
+          author: "Robert Cecil Martin",
           year: 2000,
           id: nanoid(),
-          year: 2000,
+          year: 2008,
         },
         {
-          title: "The Kite Runner",
-          author: "Khaled Hosseini",
-          year: 2003,
+          title: "JavaScript: The Definitive Guide, 7th Edition",
+          author: "David Flanagan",
+          year: 2020,
           id: nanoid(),
         },
       ],
 
-      fun: [
+      Fun: [
         {
-          title: "book1",
-          author: "author 1",
-          id: nanoid(),
-          year: 1890,
-        },
-        {
-          title: "Harry Potter",
+          title: "The Lord of the Rings, The Fellowship of the Ring",
           author: "J.K. Rowling",
-          year: 2000,
+          id: nanoid(),
+          year: 1954,
+        },
+        {
+          title: "The Lord of the Rings, The Two Towers",
+          author: "J.K. Rowling",
+          year: 1954,
           id: nanoid(),
         },
         {
-          title: "The Kite Runner",
-          author: "Khaled Hosseini",
-          year: 2003,
+          title: "The Lord of the Rings, ",
+          author: "The Return of the King",
+          year: 1955,
           id: nanoid(),
         },
       ],
     },
     addList: (listName) => {
-      const newReadingLists = { ...store.readingLists };
+      const newReadingLists = {
+        ...store.readingLists,
+      };
       newReadingLists[listName] = [];
-      store.readingLists = { ...newReadingLists };
+      store.readingLists = {
+        ...newReadingLists,
+      };
     },
     removeList: (listName) => {
-      const newReadingLists = { ...store.readingLists };
+      const newReadingLists = {
+        ...store.readingLists,
+      };
       delete newReadingLists[listName];
-      store.readingLists = { ...newReadingLists };
+      store.readingLists = {
+        ...newReadingLists,
+      };
     },
     removeItemFromList: (itemId, listName) => {
       const list = store.readingLists[listName];
       const newItems = list?.filter((e) => e.id !== itemId);
-      const newReadingLists = { ...store.readingLists };
+      const newReadingLists = {
+        ...store.readingLists,
+      };
       newReadingLists[listName] = newItems;
 
       store.readingLists = newReadingLists;
@@ -150,7 +160,9 @@ export const StoreProvider = ({ children }) => {
     addItemToList: (item, listName) => {
       const list = store.readingLists[listName];
       const newItems = [...list, item];
-      const newReadingLists = { ...store.readingLists };
+      const newReadingLists = {
+        ...store.readingLists,
+      };
       newReadingLists[listName] = newItems;
 
       store.readingLists = newReadingLists;
