@@ -1,12 +1,9 @@
 import React from "react";
-import { Container } from "@material-ui/core";
+import { observer } from "mobx-react-lite";
+import { BookList } from "../src/components/BookList/BookList";
 
-const ReadingList = () => {
-  return (
-    <Container>
-      <h1>Reading list</h1>
-    </Container>
-  );
-};
+const ReadingList = observer(() => {
+  return <BookList />;
+});
 
 export default ReadingList;
