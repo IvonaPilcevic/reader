@@ -5,6 +5,7 @@
   --navy: #323639;
   --beige: #a9835a;
   --brown: #735140;
+  --white: whitesmoke;
 
   /* font sizes */
   --xxs: 12px;
@@ -28,6 +29,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Lexend", sans-serif;
+  background: var(--blue);
 }
 
 a {
@@ -37,4 +39,33 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-weight: var(--bold);
+  color: var(--beige);
+  font-size: var(--xxl);
+}
+
+h2 {
+  font-weight: var(--semiBold);
+  color: var(--blue);
+  font-size: var(--xxl);
+}
+
+h3 {
+  font-weight: var(--semiBold);
+  color: var(--beige);
+  font-size: var(--xl);
+}
+
+.main-container {
+  background: whitesmoke;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  margin: 0 auto;
+  border: 1px solid var(--lightBlue);
+  padding: 30px 0px;
+  min-height: 85vh;
 }

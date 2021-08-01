@@ -1,0 +1,36 @@
+.button-dark,
+.button-light {
+  text-align: center;
+  max-width: 200px;
+  min-width: 150px;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: var(--semiBold);
+  transition: all 0.3s;
+}
+
+.button-dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.button-dark:hover {
+  background: var(--beige);
+}
+
+.button-light:hover,
+.button-dark:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.button-light {
+  background: var(--lightBlue);
+  color: var(--blue);
+}
+
+.button-light:hover {
+  background: var(--blue);
+  color: var(--lightBlue);
+}

@@ -1,0 +1,30 @@
+.menu-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.menu {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  height: 50px;
+  align-content: center;
+}
+
+.menu a {
+  color: var(--lightBlue);
+  font-size: var(--md);
+  font-weight: var(--semiBold);
+}
+
+.menu a:hover {
+  transform: scale(1.02);
+  transition: all 0.3s;
+  color: var(--navy);
+}
+
+.menu-active {
+  border-bottom: 2px solid var(--lightBlue)
+}
