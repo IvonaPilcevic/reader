@@ -31,10 +31,7 @@ const Home = observer(() => {
             {Object.keys(store?.readingLists)?.map((listName: any) => (
               <ListItem key={listName}>
                 <StarBorder color="disabled" /> &nbsp;
-                <span>
-                  {listName}
-                  {/* {item?.title}, {item?.author} ({item?.year}) */}
-                </span>
+                <span>{listName}</span>
               </ListItem>
             ))}
           </List>
