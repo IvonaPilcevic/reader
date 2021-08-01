@@ -15,7 +15,7 @@ export const Search = () => {
         setSearchResult([]);
       } else {
         setLoading(true);
-        fetch(`${process.env.URL}/search.json?q=${query}`)
+        fetch(`http://openlibrary.org/search.json?q=${query}`)
           .then((res) => res.json())
           .then((data) => {
             setSearchResult(data?.docs);
