@@ -130,7 +130,6 @@ export const StoreProvider = ({ children }) => {
       ],
     },
     addList: (listName) => {
-      console.log(listName);
       const newReadingLists = { ...store.readingLists };
       newReadingLists[listName] = [];
       store.readingLists = { ...newReadingLists };
