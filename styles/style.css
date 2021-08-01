@@ -84,3 +84,7 @@
   text-align: center;
   padding: 30px;
 }
+
+.book-title {
+  font-weight: var(--semiBold);
+}
